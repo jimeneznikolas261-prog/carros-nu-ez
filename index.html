@@ -1,0 +1,185 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cars Site - Mejorado</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <img src="assets/img/logo.png" alt="logo" onerror="this.style.display='none'">
+      <div>
+        <h1 style="margin:0">CarsSite</h1>
+        <div style="font-size:13px;color:var(--muted)">Venta y alquiler de autos · Bogotá</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#catalog">Catálogo</a></li>
+          <li><a href="#gallery">Galería</a></li>
+          <li><a href="#about">Sobre nosotros</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <button id="btn-theme" title="Cambiar tema">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h2>Encuentra tu próximo vehículo</h2>
+          <p>Busca entre nuestra selección actualizada de carros para venta y alquiler. Filtra por tipo y usa la búsqueda para afinar resultados.</p>
+          <div class="controls" style="margin-top:12px">
+            <input id="search" class="input" placeholder="Buscar por modelo, marca o características">
+            <select id="filter-type" class="select">
+              <option value="">Todos los tipos</option>
+              <option value="sedan">Sedán</option>
+              <option value="suv">SUV</option>
+              <option value="pickup">Pickup</option>
+              <option value="electric">Eléctrico</option>
+            </select>
+            <a href="#catalog" class="input" style="display:inline-block;line-height:34px;text-align:center">Ver catálogo</a>
+          </div>
+        </div>
+
+        <section id="catalog" style="margin-top:18px">
+          <h3>Catálogo destacado</h3>
+          <div class="grid" id="cars-grid">
+            <!-- Ejemplos de tarjetas de carro -->
+            <article class="card-car" data-type="sedan">
+              <img src="images/toyota.jfif" alt="Car 1" onerror="this.src='https://picsum.photos/seed/car1/600/400'">
+              <h4>Toyota Corolla 2020</h4>
+              <p>Sedán confiable, 46,000 km, excelente economía de combustible.</p>
+              <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+                <span class="badge">Venta</span>
+                <strong>$28,500</strong>
+              </div>
+            </article>
+
+            <article class="card-car" data-type="suv">
+              <img src="images/fordescape.jfif" alt="Car 2" onerror="this.src='https://picsum.photos/seed/car2/600/400'">
+              <h4>Ford Escape 2021</h4>
+              <p>SUV familiar, 30,000 km, buen estado general.</p>
+              <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+                <span class="badge">Alquiler</span>
+                <strong>$75/día</strong>
+              </div>
+            </article>
+
+            <article class="card-car" data-type="electric">
+              <img src="images/chevrolet.jfif" alt="Car 3" onerror="this.src='https://picsum.photos/seed/car3/600/400'">
+              <h4>Chevrolet Bolt EV 2019</h4>
+              <p>Eléctrico, autonomía 350 km, ideal ciudad.</p>
+              <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+                <span class="badge">Venta</span>
+                <strong>$18,900</strong>
+              </div>
+            </article>
+
+            <article class="card-car" data-type="pickup">
+              <img src="images/s10.jfif" alt="Car 4" onerror="this.src='https://picsum.photos/seed/car4/600/400'">
+              <h4>Chevrolet S10 2018</h4>
+              <p>Pickup robusta, ideal para carga ligera.</p>
+              <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+                <span class="badge">Venta</span>
+                <strong>$32,000</strong>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section id="testimonials" style="margin-top:22px">
+          <h3>Testimonios</h3>
+          <div class="testimonials" style="height:140px">
+            <div class="testimonial card" style="background:var(--card)">
+              <p>“Excelente atención y carro en perfectas condiciones. Recomendados.”</p>
+              <div style="font-weight:600">— Mariana T.</div>
+            </div>
+            <div class="testimonial card">
+              <p>“Rápido proceso de alquiler, muy buenos precios.”</p>
+              <div style="font-weight:600">— Andrés P.</div>
+            </div>
+            <div class="testimonial card">
+              <p>“Compré mi primer carro aquí, el asesor me explicó todo muy bien.”</p>
+              <div style="font-weight:600">— Laura M.</div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="card">
+        <h3>Buscar por presupuesto</h3>
+        <p>Usa los rangos para filtrar rápidamente (demo visual).</p>
+        <div style="display:flex;gap:8px;flex-direction:column">
+          <input class="input" placeholder="Mínimo (ej. 10000)">
+          <input class="input" placeholder="Máximo (ej. 35000)">
+          <button class="input" style="text-align:center">Aplicar</button>
+        </div>
+
+        <hr style="margin:12px 0">
+        <h4>Contacto rápido</h4>
+        <p>Llámanos o escríbenos por WhatsApp</p>
+        <a href="tel:+571234567890">+57 1 234 567 890</a><br>
+        <a href="mailto:ventas@carssite.example">ventas@carssite.example</a>
+      </aside>
+    </section>
+
+    <section id="gallery" style="margin-top:26px">
+      <h3>Galería</h3>
+      <div class="gallery">
+        <img src="images/bmw.jfif" alt="g1" onerror="this.src='https://picsum.photos/seed/g1/400/300'">
+        <img src="images/nexu.jfif" alt="g2" onerror="this.src='https://picsum.photos/seed/g2/400/300'">
+        <img src="images/mercedes.jfif" alt="g3" onerror="this.src='https://picsum.photos/seed/g3/400/300'">
+        <img src="images/nissan.jfif" alt="g4" onerror="this.src='https://picsum.photos/seed/g4/400/300'">
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:26px">
+      <h3>Sobre nosotros</h3>
+      <p>CarsSite es una microempresa con más de 8 años prestando servicios de venta y alquiler de vehículos en Bogotá. Nuestro objetivo es brindar vehículos en excelente estado, con transparencia en la documentación y asesoría personalizada.</p>
+      <ul>
+        <li>Inspección técnica antes de cada entrega</li>
+        <li>Financiación y planes de pago</li>
+        <li>Asesoría personalizada y pruebas de manejo</li>
+      </ul>
+    </section>
+
+    <section id="contact" style="margin-top:20px">
+      <h3>Contacto</h3>
+      <form onsubmit="alert('Formulario simulado: envía un correo a ventas@carssite.example'); return false;" class="card">
+        <label>Nombre</label><br>
+        <input class="input" required placeholder="Tu nombre"><br><br>
+        <label>Correo</label><br>
+        <input class="input" type="email" required placeholder="tu@correo.com"><br><br>
+        <label>Mensaje</label><br>
+        <textarea class="input" required placeholder="¿En qué te ayudamos?" rows="4"></textarea><br><br>
+        <button class="input" type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <strong>CarsSite</strong><br>
+        <small class="muted">Calle Falsa 123, Bogotá · NIT 900000000</small>
+      </div>
+      <div class="center">
+        <div>© <span id="year"></span> CarsSite</div>
+        <div style="font-size:13px;color:var(--muted)">Síguenos en redes: Instagram · Facebook</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
